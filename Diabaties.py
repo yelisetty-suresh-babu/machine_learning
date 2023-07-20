@@ -48,6 +48,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 from sklearn import svm
 from sklearn.metrics import accuracy_score
+import os
 
 # data= pd.read_csv("/Users/yelisettysureshbabu/Downloads/DSA/machine learning/diabetes.csv")
 data = pd.read_csv(f'{os.getcwd()}/diabetes.csv', names=['x', 'y'])
@@ -59,4 +60,5 @@ x = data.drop(columns="outcome", axis=1)
 y = data['outcome']
 
 
-scaler.fix()
+scaler.fit(x,y)
+scaler.
